@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hepsiburada Pulling Product Comments</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body style="background: #000;">
+    <div class="login">
+        <h1>Hepsiburada Pulling Product Comments</h1>
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('collectData')}}" method="post">
+            <input type="text" name="productPath" placeholder="Product Path"
+                value="vestel-cmi-97202-wifi-9-kg-1000-devir-camasir-makinesi-p-HBCV00000NROP7" required="required" />
+            <button type="submit" class="btn btn-primary btn-block btn-large">Pulling</button>
+        </form>
+        <br>
+        <br>
+        {{ alert_message }}
+    </div>
+</body>
+
+</html>
